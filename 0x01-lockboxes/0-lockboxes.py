@@ -1,25 +1,30 @@
 #!/usr/bin/python3
 """
-A module for working with lockboxes
+This script demonstrates the implementation of a lockbox problem.
 """
 
 
 def canUnlockAll(boxes):
     """
-    Checks if all the boxes in a list of boxes containing the keys
-    (indices) to other boxes can be unlocked given that the first
-    box is unlocked.
+    Unlock the given lockboxes.
+
+    Args:
+        boxes (list): A list of lockboxes, where each box is
+        represented by a boolean value.
+
+    Returns:
+        list: A list of unlocked boxes.
     """
-    size = len(boxes)
-    opened = [False]*size
-    opened[0] = True
-    queue = deque([0])
+    box_count = len(boxes)
+    visited = [False] * box_count
+    visited[0] = True
+    stack = [0]
 
-    while queue:
-        box = queue.popleft()
+    while stack:
+        box = stack.pop()
         for key in boxes[box]:
-            if key < size and not opened[key]:
-                opened[key] = True
-                queue.append(key)
+            if key < box_count and not visited[key]:
+                visited[key] = True
+                stack.append(key)
 
-    return all(opened)
+    return all(visited)
