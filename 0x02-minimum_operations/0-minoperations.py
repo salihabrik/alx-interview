@@ -14,10 +14,8 @@ def minOperations(n):
     Returns:
         int: The minimum number of operations needed.
 
-    Example:
-        n = 9
-        minOperations(n) => 6
     """
+
     if n <= 1:
         return 0
 
