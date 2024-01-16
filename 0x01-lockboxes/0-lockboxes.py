@@ -6,7 +6,7 @@ This script demonstrates the implementation of a lockbox problem.
 
 def canUnlockAll(boxes):
     """
-    Unlock the given lockboxes.
+    Unlock given lockboxes.
 
     Args:
         boxes (list): A list of lockboxes, where each box is
