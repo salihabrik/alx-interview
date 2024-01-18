@@ -1,9 +1,13 @@
 def minOperations(n):
     """
+<<<<<<< HEAD
     Calculates the fewest number of operations needed to result in exactly n H characters in the file.
 
     :param n: Integer, the target number of H characters
     :return: Integer, the fewest number of operations needed
+=======
+    Calculates the fewest number of operations needed to result in exactly n H characters in file.
+>>>>>>> 3156ffb62988833b2c4c5b23ede4ae559645d62c
     """
     if n <= 1:
         return 0
