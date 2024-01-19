@@ -16,10 +16,4 @@ This project contains a Python function that calculates the minimum number of op
 
 ## Function Usage
 
-The `minOperations` function takes an integer `n` as input and returns the minimum number of operations needed to get `n` 'H' characters.
-
-Example:
-
-```python
-n = 9
-print(minOperations(n))  # Output: 6
+The `minOperations` function takes an integer `n` as input and returns the minimum number of operations needed to get `n` 'H' 
