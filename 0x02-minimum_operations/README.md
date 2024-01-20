@@ -2,7 +2,7 @@
 
 ## Description
 
-This project contains a Python function that calculates the minimum number of operations needed to result in exactly `n` 'H' characters in a file. The only operations allowed are 'Copy All' and 'Paste'.
+This project contains a Python function that calculates the minimum number of operati'.
 
 ## Files
 
