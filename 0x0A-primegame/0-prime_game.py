@@ -3,9 +3,10 @@
 
 
 def isWinner(x, nums):
-    """ Solve Prime Game """
+    """ Determine the winner of the Prime Game """
     
     def is_prime(num):
+        """ Check if a number is prime """
         if num < 2:
             return False
         for i in range(2, int(num**0.5) + 1):
@@ -14,6 +15,7 @@ def isWinner(x, nums):
         return True
 
     def get_primes(n):
+        """ Get a list of prime numbers up to n """
         primes = []
         for i in range(2, n + 1):
             if is_prime(i):
@@ -21,9 +23,11 @@ def isWinner(x, nums):
         return primes
 
     def remove_multiples(numbers, prime):
+        """ Remove multiples of a prime number from the list """
         return [num for num in numbers if num % prime != 0]
 
     def play_round(numbers):
+        """ Play a round of the Prime Game """
         turn = 0
         while numbers:
             primes = get_primes(max(numbers))
@@ -32,10 +36,10 @@ def isWinner(x, nums):
                 if prime in numbers:
                     numbers = remove_multiples(numbers, prime)
                     found = True
+                    turn = 1 - turn  # Switch turns before breaking
                     break
             if not found:
                 break
-            turn = 1 - turn
 
         return turn
 
