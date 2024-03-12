@@ -3,6 +3,8 @@
 
 
 def isWinner(x, nums):
+    """ Solve Prime Game """
+    
     def is_prime(num):
         if num < 2:
             return False
@@ -22,7 +24,7 @@ def isWinner(x, nums):
         return [num for num in numbers if num % prime != 0]
 
     def play_round(numbers):
-        turn = 0  # 0 for Maria, 1 for Ben
+        turn = 0
         while numbers:
             primes = get_primes(max(numbers))
             found = False
