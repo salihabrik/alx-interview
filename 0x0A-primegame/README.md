@@ -66,7 +66,7 @@ Run the provided test script to check the winner for a given example:
 Feel free to add or modify sections based on the specific details of your project. Make sure to update the author information, license, and any other relevant details.
 
 ## Author
-[Saliha Brik](salihabrik)
+[salihabrik](salihabrik)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
