@@ -1,62 +1,45 @@
 #!/usr/bin/python3
-""" Prime Game """
+"""Solve the prime game problem."""
 
 
+def is_prime(x: int) -> bool:
+    """Return True if x is a prime number, False otherwise."""
+    if x == 1:
+        return False
 
-def isWinner(x, nums):
-    """ Determine the winner of thePrime Game """
-    
-    def is_prime(num):
-        """ Check if number is prime """
-        if num < 2:
+    # check if x is divisible by any int
+    # from 2 to the square root of x
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
             return False
-        for i in range(2, int(num**0.5) + 1):
-            if num % i == 0:
-                return False
-        return True
 
-    def get_primes(n):
-        """ Get a list of prime numbers up to n """
-        primes = []
-        for i in range(2, n + 1):
-            if is_prime(i):
-                primes.append(i)
-        return primes
+    return True
 
-    def remove_multiples(numbers, prime):
-        """ Remove multiples of a prime number from the list """
-        return [num for num in numbers if num % prime != 0]
 
-    def play_round(numbers):
-        """ Play a round of the Prime Game """
-        turn = 0
-        while numbers:
-            primes = get_primes(max(numbers))
-            found = False
-            for prime in primes:
-                if prime in numbers:
-                    numbers = remove_multiples(numbers, prime)
-                    found = True
-                    turn = 1 - turn  # Switch turns before breaking
-                    break
-            if not found:
-                break
+# precalculate the number of primes between 1 and n inclusive
+# for each n from 1 to 10000 (which is the maximum defined in the problem)
+numOfPrimesByN = {}
+numOfPrimesByN[0] = 0
+count = 0
+for i in range(1, 10001):
+    if is_prime(i):
+        count += 1
+    numOfPrimesByN[i] = count
 
-        return turn
 
-    maria_wins = 0
-    ben_wins = 0
-
-    for _ in range(x):
-        winner = play_round(nums)
-        if winner == 0:
-            maria_wins += 1
+def isWinner(x: int, nums: list) -> str:
+    """Return the winner of the game."""
+    Maria = Ben = 0
+    # for each round
+    for i in range(x):
+        if numOfPrimesByN[nums[i]] % 2 != 0:
+            # there is an odd number of turns -> Maria, the first player, wins
+            Maria += 1
         else:
-            ben_wins += 1
+            # there is an even number of turns -> Ben, the second player, wins
+            Ben += 1
 
-    if maria_wins > ben_wins:
-        return "Maria"
-    elif ben_wins > maria_wins:
-        return "Ben"
-    else:
+    if Maria == Ben:
         return None
+
+    return 'Maria' if Maria > Ben else 'Ben'
