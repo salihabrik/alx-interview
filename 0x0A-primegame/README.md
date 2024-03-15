@@ -47,8 +47,7 @@ This project involves solving a competitive game scenario where Maria and Ben pl
 
 ## Requirements
 - **Editors:** vi, vim, emacs
-- **Python Version:** 3.4.3
--
+
 
 ## Project Structure
 - `0-prime_game.py`: The main Python file containing the implementation of the `isWinner` function.
