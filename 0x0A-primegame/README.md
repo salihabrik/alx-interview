@@ -43,10 +43,7 @@ This project involves solving a competitive game scenario where Maria and Ben pl
 
 - **Python Programming:**
   - Loops and conditional statements for implementing game logic and algorithms.
-  - Arrays and lists for storing the integers and tracking removed numbers.
-
-## Requirements
-- **Editors:** vi, vim, emacs
+  - Arrays and lists for 
 
 
 ## Project Structure
