@@ -30,9 +30,6 @@ This project involves solving a competitive game scenario where Maria and Ben pl
   - Understanding what prime numbers are.
   - Efficient algorithms for identifying prime numbers within a range.
 
-- **Sieve of Eratosthenes:**
-  - An efficient algorithm for finding all prime numbers up to any given limit.
-
 - **Game Theory:**
   - Basic principles of competitive games where players take turns.
   - The concept of optimal play.
