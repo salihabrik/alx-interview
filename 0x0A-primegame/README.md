@@ -48,14 +48,7 @@ This project involves solving a competitive game scenario where Maria and Ben pl
 - `main_0.py`: Sample script to test the `isWinner` function.
 
 ## Usage
-Run the provided test script to check the winner for a given example:
-
-```
-./main_0.py
-```
-
-
-Feel free to  on the of your project. Make sure to update the author information, license, and any other relevant details.
+Run the provided test script to check the winner for Make sure to update the author information, license, and any other relevant details.
 
 ## Author
 [salihabrik](salihabrik)
