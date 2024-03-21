@@ -33,7 +33,7 @@ This project involves solving a competitive game scenario where Maria and Ben pl
 - **Game Theory:**
   - Basic principles of competitive games where players take turns.
   - The concept of optimal play.
-  - Understanding win conditions and strategies leading to a win or loss.
+  - Understanding win conditions and strategies leading to a win or loss
 
 - **Dynamic Programming/Memoization:**
   - Using previous results to make future calculations faster, potentially necessary for optimizing the solution for multiple rounds of the game.
