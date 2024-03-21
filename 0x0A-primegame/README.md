@@ -40,7 +40,7 @@ This project involves solving a competitive game scenario where Maria and Ben pl
 
 - **Python Programming:**
   - Loops and conditional statements for implementing game logic and algorithms.
-  - Arrays and lists for 
+  - Arrays and lists 
 
 
 ## Project Structure
